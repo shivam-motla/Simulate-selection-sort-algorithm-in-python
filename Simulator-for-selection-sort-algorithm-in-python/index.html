@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link href="array.css" rel="stylesheet" type="text/css"/>
+<script src="array.js"></script>
+<title>Selection sort</title>
+</head>
+
+<body>
+<div id="header"> Sorting list using Selection Sort in Python</div>
+
+
+<div class="inputDivision">
+	<div class="inputDivisionTitle"><div class="initializePic"></div><div class="initializeText">Initialize</div></div>
+	<div class="inputDivisionBody" style="background: floralwhite">
+		<div class="arraySizeInputBlock">
+			<div class="arraySizeText">Enter the size of list</div>
+			<input class="arraySizeInputField" id="inputArraySize" type="text"  />
+			<button class="button okButton" id="btnOk" style="background-image: linear-gradient(#2991ef, #3072b3);">OK</button>
+		</div><!-- end of arraySizeInputBlock -->
+		<div class="radioButtonDivision hide" id="inputButtonRadio">
+            <div class="randomRadioButtonDivision"><input class="radiobutton" id="btnRandom" name="radio_group" type="radio" /><label class="radioText" for="male">Generate Random Values</label></div><!-- end of randomRadioButtonDivision -->
+            <div class="enterValueRadioButtonDivision"><input class="radiobutton" id="btnManual" name="radio_group" type="radio" /><label class="radioText" for="male">Enter Values Manually</label></div><!-- end of enterValueRadioButtonDivision -->
+			<textarea class="arrayInputArea" id="userInput" name="firstname" placeholder="Enter values here in comma seperated format or seperated with space"></textarea>
+          	<div class="buttonHolder"><button class="buttonDisable startButton" disabled="" id="btnStart" >Start</button><button class="buttonDisable nextButton" disabled="" id="btnNext" >Next</button>
+
+    	          	<!-- <div style="float: left; height: 15px; width: 100%;"></div> -->
+    	     <button class="button" id="reloadbtn" onclick="reloadbn()" style="    margin-top: 12px;
+    width: 81%; background-image: linear-gradient(#2991ef, #3072b3);">Sort another list</button>
+
+          	</div><!-- end of buttonHolder -->
+        </div><!-- end of radioButtonDivision -->
+    
+    </div><!-- end of inputDivisionBody -->
+</div><!-- end of inputDivision -->
+
+<div class="executionDivision">
+	<div class="executionDivisionTitle"><div class="executionPic"></div><div class="executionText">Step Execution</div></div>
+	<div class="stepExecutionDisplay" style="background: floralwhite">
+		<div class="hide" id="1-dArray">
+
+<div id="line1">A = list(map(int,input().split())) </div>
+<div id="line2">for i in range(len(A)): </div>
+<div id="line3" style="padding-left:5%;">    min_idx = i </div>
+<div id="line4" style="padding-left:5%;">    for j in range(i+1, len(A)): </div>
+<div id="line5" style="padding-left:10%;">        if A[min_idx] > A[j]: </div>
+<div id="line6" style="padding-left:15%;">            min_idx = j        </div>
+<div id="line7" style="padding-left:5%;">    A[i], A[min_idx] = A[min_idx], A[i]  </div>
+<div id="line8" >print ("Array is sorted") </div>
+<div id="line9" ></div>
+		</div><!-- end of 1-dArray -->
+	</div><!-- end of stepExecutionDisplay -->
+</div><!-- end of executionDivision -->
+	
+<div class="outputDivision"> 
+	<div class="outputDivisionTitle"><div class="outputPic"></div><div class="outputText">Code Output</div></div>
+	<div class="resultDisplay" id="resultDisplay" style="background: floralwhite">
+		<div class="KeyPointerDisplayDivision">
+			<div class="sortedKeyLabel"></div>
+			<div class="sortedKeyLabelText">Sorted</div>		
+			<div class="unsortedKeyLabel"></div>
+			<div class="unsortedKeyLabelText">Unsorted</div>
+			<div class="keyPositionLabel"></div>
+			<div class="keyPositionLabelText">j-th position</div>
+		</div><!-- end of KeyPointerDisplayDivision -->
+		<div class="sortingDivision" id="sortingDiv"></div>
+		<div class="currentKeyPositionIndicator">
+			<div class="currentKeyValue" id="key">None</div>
+			<div class="textKeyValue"><= i-th element of list</div>
+		</div><!-- end of currentKeyPositionIndicator -->
+	</div><!-- end of resultDisplay -->
+</div><!-- end of outputDivision -->
+
+</body></html>
